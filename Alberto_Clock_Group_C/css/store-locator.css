@@ -1,0 +1,206 @@
+.store-locator {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 0 96px;
+  background: linear-gradient(135deg, #11151b 0%, #1d2b2d 58%, #382b22 100%);
+  color: #f7f2e9;
+}
+
+.store-locator::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -180px;
+  top: -220px;
+  border: 1px solid rgba(201, 161, 90, 0.24);
+  border-radius: 50%;
+  box-shadow: 0 0 0 36px rgba(201, 161, 90, 0.04), 0 0 0 72px rgba(201, 161, 90, 0.025);
+  transform: rotate(-18deg);
+}
+
+.store-locator .eyebrow {
+  color: #e8ce9c;
+}
+
+.store-locator h2 {
+  color: #fffaf0;
+  max-width: 620px;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: .95;
+}
+
+.store-locator .locator-intro {
+  max-width: 560px;
+  color: rgba(247, 242, 233, .72);
+}
+
+.store-locator-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.store-locator-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.locator-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: rgba(247, 242, 233, .52);
+  font: 600 .7rem/1.4 "Space Mono", monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.locator-note::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e8ce9c;
+  box-shadow: 0 0 0 5px rgba(232, 206, 156, .12);
+}
+
+.locator-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.locator-actions .btn-alberto {
+  background: #e8ce9c;
+  color: #11151b;
+}
+
+.locator-actions .btn-alberto-outline {
+  color: #f7f2e9;
+  border-color: rgba(247, 242, 233, .35);
+}
+
+.locator-map-shell {
+  min-height: 480px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, .08);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .26);
+  backdrop-filter: blur(12px);
+}
+
+#storeLocatorMap {
+  min-height: 458px;
+  height: 100%;
+  border-radius: 21px;
+  overflow: hidden;
+}
+
+.leaflet-container {
+  font-family: "Manrope", sans-serif;
+  background: #dce4e2;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #151b20;
+  color: #f7f2e9;
+}
+
+.leaflet-popup-content {
+  margin: 14px 16px;
+  line-height: 1.5;
+}
+
+.locator-popup-title {
+  margin-bottom: 4px;
+  color: #e8ce9c;
+  font: 700 .8rem/1.2 "Space Mono", monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.locator-popup-copy {
+  margin: 0;
+  color: rgba(247, 242, 233, .72);
+  font-size: .8rem;
+}
+
+.locator-stores {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.locator-store-card {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .07);
+  color: #f7f2e9;
+  text-align: left;
+  transition: transform .3s var(--experience-ease), background .3s ease, border-color .3s ease;
+}
+
+.locator-store-card:hover,
+.locator-store-card.is-active {
+  transform: translateY(-5px);
+  border-color: rgba(232, 206, 156, .65);
+  background: rgba(232, 206, 156, .12);
+}
+
+.locator-store-card h3 {
+  margin: 0 0 8px;
+  color: #fffaf0;
+  font-size: 1.05rem;
+}
+
+.locator-store-card p {
+  margin: 0;
+  color: rgba(247, 242, 233, .63);
+  font-size: .82rem;
+}
+
+.locator-store-card .store-status {
+  display: block;
+  margin-top: 16px;
+  color: #e8ce9c;
+  font: 700 .64rem/1.3 "Space Mono", monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .store-locator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .locator-map-shell {
+    min-height: 390px;
+  }
+
+  #storeLocatorMap {
+    min-height: 370px;
+  }
+}
+
+@media (max-width: 700px) {
+  .store-locator {
+    padding: 80px 0 72px;
+  }
+
+  .locator-stores {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALBERTO CLOCKS — Watches Built to Outlast the Trend</title>
+  <meta name="description"
+    content="ALBERTO CLOCKS makes quartz and smart watches for men and women, sold direct online across Pakistan with a 1-year warranty and free delivery.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/store-locator.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="js/theme.js"></script>
+</head>
+
+<body class="home-experience">
+
+  <header class="alberto-nav alberto-nav--glass" id="albertoNav">
+    <div class="container-xl">
+      <nav class="navbar navbar-expand-lg py-0">
+        <a class="brand-mark" href="index.html">ALBERTO CLOCKS</a>
+        <div class="visitor-menu" id="visitorMenu">
+          <button type="button" class="visitor-chip" aria-haspopup="true" aria-expanded="false" aria-label="Visitor session">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M4.8 20c.6-3.9 3.6-6 7.2-6s6.6 2.1 7.2 6"/></svg>
+            <span class="visitor-label">Visitor</span>
+            <span class="visitor-count">1</span>
+          </button>
+          <div class="visitor-panel">
+            <p class="visitor-panel-title">Guest session</p>
+            <ul class="visitor-facts">
+              <li><span>Visitor ID</span><strong class="visitor-id">&mdash;</strong></li>
+              <li><span>Visits</span><strong class="visitor-visits">&mdash;</strong></li>
+              <li><span>First seen</span><strong class="visitor-since">&mdash;</strong></li>
+            </ul>
+            <div class="visitor-actions">
+              <a class="visitor-btn" href="html/shop.html">Browse as visitor</a>
+              <button type="button" class="visitor-btn visitor-btn-ghost visitor-reset">Reset session</button>
+            </div>
+          </div>
+        </div>
+        <div class="nav-panel" id="navMain">
+          <ul class="navbar-nav nav-links-list">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item has-dropdown">
+              <a class="nav-link" href="html/shop.html">Products <span class="dropdown-caret">⌄</span></a>
+              <div class="dropdown-panel">
+                <a class="nav-link" href="html/shop.html?cat=luxury">Luxury</a>
+                <a class="nav-link" href="html/shop.html?cat=sports">Sports</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="html/about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="html/contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#store-locator">Store Locator</a></li>
+          </ul>
+
+          <div class="nav-icons">
+            <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle dark mode"
+              title="Toggle dark mode">
+              <svg class="icon-sun" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" />
+              </svg>
+              <svg class="icon-moon" viewBox="0 0 24 24">
+                <path d="M20.5 14.7A8.5 8.5 0 1 1 9.3 3.5a7 7 0 0 0 11.2 11.2z" />
+              </svg>
+            </button>
+            <button class="icon-btn" id="searchToggle" aria-label="Search">
+              <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" />
+                <path d="M21 21l-4.3-4.3" />
+              </svg>
+            </button>
+            <a href="html/cart.html" class="icon-btn cart-btn" aria-label="Cart">
+              <svg viewBox="0 0 24 24">
+                <path d="M6 8h12l-1 12H7L6 8z" />
+                <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+              </svg>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero hero-home" id="hero">
+    <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+    <div class="container-xl">
+      <div class="row align-items-center gy-5 hero-row">
+        <div class="col-lg-6 hero-content">
+          <p class="eyebrow hero-eyebrow reveal-up">Autumn / Winter Collection</p>
+          <h1 class="hero-heading reveal-up delay-1">Time,<br>Redefined.</h1>
+          <p class="hero-lede reveal-up delay-2">Discover timeless design, engineered for the modern generation — where
+            precision craftsmanship meets tomorrow's technology.</p>
+          <div class="hero-cta reveal-up delay-3">
+            <a href="html/shop.html" class="btn-hero-primary">Explore Collection <span class="arrow">→</span></a>
+            <a href="html/shop.html" class="btn-hero-secondary">Shop Now</a>
+          </div>
+          <div class="hero-stats reveal-up delay-4">
+            <div class="stat"><span class="stat-num">150+</span><span class="stat-label">Countries</span></div>
+            <div class="stat"><span class="stat-num">2M+</span><span class="stat-label">Customers</span></div>
+            <div class="stat"><span class="stat-num">4.9 ★</span><span class="stat-label">Avg. Rating</span></div>
+          </div>
+        </div>
+
+        <div class="luxury-hero-slider">
+
+          <div class="luxury-slider-stage">
+
+
+            <div class="luxury-slide luxury-slide-active">
+              <a href="html/product.html?id=hammer-chrono-60" aria-label="View Hammer 6.0">
+                <img src="images/watch.png" alt="Hammer 6.0 — ALBERTO CLOCKS" draggable="false">
+              </a>
+            </div>
+
+            <div class="luxury-slide luxury-slide-prev">
+              <a href="html/product.html?id=delex-clover" aria-label="View Delex Clover">
+                <img src="images/watch-1.png" alt="Delex Clover — ALBERTO CLOCKS" draggable="false">
+              </a>
+            </div>
+
+            <div class="luxury-slide luxury-slide-active">
+              <a href="html/product.html?id=noir-minimal" aria-label="View Noir Minimal">
+                <img src="images/watch-2.png" alt="Noir Minimal — ALBERTO CLOCKS" draggable="false">
+              </a>
+            </div>
+
+            <div class="luxury-slide">
+              <a href="html/product.html?id=sveston-chrono-navy" aria-label="View Sveston Chronograph 2.0">
+                <img src="images/watch-3.png" alt="Sveston Chronograph 2.0 — ALBERTO CLOCKS" draggable="false">
+              </a>
+            </div>
+
+            <div class="luxury-slide luxury-slide-active">
+              <a href="html/product.html?id=aspire-classic" aria-label="View Aspire Classic">
+                <img src="images/watch-4.png" alt="Aspire Classic — ALBERTO CLOCKS" draggable="false">
+              </a>
+            </div>
+
+          </div>
+
+
+          <button class="luxury-slider-btn luxury-slider-prev" type="button" aria-label="Previous image">
+            <span>←</span>
+          </button>
+
+          <button class="luxury-slider-btn luxury-slider-next" type="button" aria-label="Next image">
+            <span>→</span>
+          </button>
+
+
+          <div class="luxury-slider-dots">
+
+            <button class="luxury-slider-dot luxury-dot-active" type="button" data-slide="0"></button>
+
+            <button class="luxury-slider-dot" type="button" data-slide="1"></button>
+
+            <button class="luxury-slider-dot" type="button" data-slide="2"></button>
+
+            <button class="luxury-slider-dot" type="button" data-slide="3"></button>
+
+            <button class="luxury-slider-dot" type="button" data-slide="4"></button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container-xl">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow mb-1">This week</p>
+          <h2>Featured watches</h2>
+        </div>
+        <a href="html/shop.html" class="see-all">View all →</a>
+      </div>
+      <div class="row g-4" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <section class="craft-band py-5">
+    <div class="container-xl">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="craft-item">
+            <p class="mark">CASE</p>
+            <h4>316L Surgical Steel</h4>
+            <p>Every case ships in the same-grade steel used in higher-priced watches — it won't tarnish against your
+              skin or a Karachi summer.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="craft-item">
+            <p class="mark">MOVEMENT</p>
+            <h4>Japanese Quartz</h4>
+            <p>Accurate to within a few seconds a month, serviced by local retailers, and simple enough to never
+              surprise you with a repair bill.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="craft-item">
+            <p class="mark">DELIVERY</p>
+            <h4>Cash on Delivery</h4>
+            <p>Order from Lahore, Karachi, Islamabad, or anywhere in between — pay when the box is in your hands, not
+              before.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container-xl">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow mb-1">From customers</p>
+          <h2>What people wear</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">Bought the Meridian for my brother's wedding. Nobody believed it wasn't a Rs. 50,000 watch.
+            </p>
+            <p class="who">— Ahmed R., Lahore</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">Liked that the discount felt real — checked the price history myself before ordering.</p>
+            <p class="who">— Sana K., Karachi</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testi-card">
+            <div class="stars">★★★★☆</div>
+            <p class="quote">Delivery took five days, exactly as promised. Strap swap was easy at their Islamabad store.
+            </p>
+            <p class="who">— Bilal H., Islamabad</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-band py-5">
+    <div class="container-xl">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <p class="eyebrow" style="color:#14151a99;">Stay in the loop</p>
+          <h2 class="mb-0">New drops, <span class="accent-italic">before the drop.</span></h2>
+        </div>
+        <div class="col-lg-6">
+          <form class="js-newsletter-form d-flex gap-2 flex-column flex-sm-row">
+            <input type="email" class="form-control" placeholder="you@email.com" required>
+            <button type="submit" class="btn-alberto">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="store-locator" id="store-locator">
+    <div class="container-xl">
+      <div class="store-locator-grid">
+        <div class="store-locator-copy experience-reveal">
+          <p class="eyebrow mb-3">Visit in person</p>
+          <h2>Find your time, in the real world.</h2>
+          <p class="locator-intro">Explore our interactive map and discover the cities prepared for a future ALBERTO
+            CLOCKS studio experience.</p>
+          <span class="locator-note">Demo locations shown / verify before launch</span>
+          <div class="locator-actions">
+            <button type="button" class="btn-alberto" id="findAStore">Find a Store</button>
+            <a href="html/contact.html" class="btn-alberto-outline">Ask the team</a>
+          </div>
+        </div>
+        <div class="locator-map-shell experience-reveal">
+          <div id="storeLocatorMap" aria-label="Interactive demo store locator map"></div>
+        </div>
+      </div>
+      <div class="locator-stores">
+        <button type="button" class="locator-store-card experience-reveal" data-store-id="lahore">
+          <h3>ALBERTO Studio / Lahore</h3>
+          <p>Demo location. Address to be confirmed.</p><span class="store-status">Demo pin</span>
+        </button>
+        <button type="button" class="locator-store-card experience-reveal" data-store-id="karachi">
+          <h3>ALBERTO Studio / Karachi</h3>
+          <p>Demo location. Address to be confirmed.</p><span class="store-status">Demo pin</span>
+        </button>
+        <button type="button" class="locator-store-card experience-reveal" data-store-id="islamabad">
+          <h3>ALBERTO Studio / Islamabad</h3>
+          <p>Demo location. Address to be confirmed.</p><span class="store-status">Demo pin</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container-xl">
+      <div class="row g-4 footer-nav">
+        <div class="col-lg-4 col-md-6">
+          <a class="brand-mark d-inline-block mb-3" href="index.html">ALBERTO CLOCKS<span class="dot">.</span></a>
+          <p style="max-width:320px; color:#564f77;">Direct-to-wrist watches, priced once and warrantied properly. Based in Pakistan, worn everywhere.</p>
+          <div class="social-row mt-3">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="TikTok">TT</a>
+            <a href="#" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Shop</h5>
+          <a class="flink" href="html/shop.html">All Watches</a>
+          <a class="flink" href="html/shop.html?cat=sports">Sports</a>
+          <a class="flink" href="html/shop.html?cat=luxury">Luxury</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Company</h5>
+          <a class="flink" href="html/about.html">About Us</a>
+          <a class="flink" href="html/contact.html">Contact</a>
+          <a class="flink" href="index.html#store-locator">Store Locator</a>
+          <a class="flink" href="#">Careers</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Support</h5>
+          <a class="flink" href="html/contact.html#faq">FAQs</a>
+          <a class="flink" href="html/contact.html#faq">Shipping &amp; Delivery</a>
+          <a class="flink" href="html/contact.html#faq">Returns &amp; Exchange</a>
+          <a class="flink" href="html/contact.html#faq">Warranty</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Legal</h5>
+          <a class="flink" href="#">Privacy Policy</a>
+          <a class="flink" href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between gap-2">
+        <span>© 2026 ALBERTO CLOCKS. Demo storefront — not a real store.</span>
+        <span>Built with HTML, Bootstrap &amp; jQuery</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/store-locator.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/home-motion.js"></script>
+  <script>
+
+    renderProductGrid($("#featuredGrid"), PRODUCTS.slice(0, 8));
+
+  </script>
+<script src="js/visitor.js"></script>
+</body>
+
+</html>
